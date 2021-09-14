@@ -65,12 +65,273 @@
 }
 .t_formBox{
     form{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3,48px);
+        grid-gap: 30px;
+        
         input, select{
             display: block;
-            width: 30%;
+            width: 100%;
         }
     }
+    .t_rangeBox{
+        grid-column: 1/3;
+    }
+    .t_post{
+    grid-column: 2/3;
+    background: $lightyBlue;
+    @include inputDecor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: $white;
+    }
+    
 }
+.t_peas{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+    div{
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #C4C4C4;
+    }
+}
+._01{
+    top: 47px;
+    left: calc(19.5% - (110px/2));
+}
+._02{
+    top: 47px;
+    left: calc(39.5% - (110px/2));
+}
+._03{
+    top: 47px;
+    left: calc(60.4% - (110px/2));
+}
+._04{
+    top: 47px;
+    left: calc(80.4% - (110px/2));
+}
+.t_inputText{
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid $white;
+    outline: none;
+}
+::-webkit-input-placeholder {color:#000000;}
+::-moz-placeholder          {color:#000000;}
+:-moz-placeholder           {color:#000000;}
+:-ms-input-placeholder      {color:#000000;}
+.t_label{
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+.t_rangeBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.input__wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+  }
+   
+  .input__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+   
+  .input__file-icon-wrapper {
+    height: 20px;
+    width: 20px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+   
+  .input__file-button-text {
+    line-height: 1;
+    margin-top: 1px;
+  }
+   
+  .input__file-button {
+    width: 100%;
+    height: 100%;
+    background: $white;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #272733;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 0 92px;
+  }
+
+  #page {
+    width: 100%;
+  }
+  
+  #page h2 {
+    font-weight: normal;
+    text-indent: -99999px;
+    overflow: hidden;
+    background: url('../img/your_product.png') no-repeat;
+    width: 100%;
+  }
+  
+ 
+  
+  .tzSelect {
+    /* ÐšÐ¾Ð½Ñ‚ÐµÐ¹Ð½ÐµÑ€ Ð´Ð»Ñ Ð½Ð¾Ð²Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° select */
+    height: 34px;
+    display: inline-block;
+    position: relative;
+    /* ÐŸÑ€ÐµÐ´Ð²Ð°Ñ€Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð°Ñ Ð·Ð°Ð³Ñ€ÑƒÐ·ÐºÐ° Ñ„Ð¾Ð½Ð¾Ð²Ð¾Ð³Ð¾ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ Ð´Ð»Ñ Ð²Ñ‹Ð¿Ð°Ð´Ð°ÑŽÑ‰Ð¸Ñ… Ð¿ÑƒÐ½ÐºÑ‚Ð¾Ð² */
+    background: url("../img/dropdown_slice.png") no-repeat -99999px;
+  }
+  
+  .tzSelect .selectBox {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* Ð£ÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ° ÑˆÑ€Ð¸Ñ„Ñ‚Ð° */
+    font: 13px/34px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px 0 #EEEEEE;
+    color: #666666;
+    /* Ð˜ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²ÐµÐ½Ð½Ñ‹Ñ… Ñ„Ð¾Ð½Ð¾Ð² CSS3 */
+    background: url('../img/select_slice.png') repeat-x #ddd;
+    background-image: url('../img/select_slice.png'), url('../img/select_slice.png'), url('../img/select_slice.png'), url('../img/select_slice.png');
+    background-position: 0 -136px, right -204px, 50% -68px, 0 0;
+    background-repeat: no-repeat, no-repeat, no-repeat, repeat-x;
+    cursor: pointer;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+  }
+  
+  .tzSelect .selectBox:hover,
+  .tzSelect .selectBox.expanded {
+    background-position: 0 -170px, right -238px, 50% -102px, 0 -34px;
+    color: #2c5667;
+    text-shadow: 1px 1px 0 #9bc2d0;
+  }
+  
+  .tzSelect .dropDown {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    border: 1px solid #32333b;
+    border-width: 0 1px 1px;
+    list-style: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-box-shadow: 0 0 4px #111;
+    -webkit-box-shadow: 0 0 4px #111;
+    box-shadow: 0 0 4px #111;
+  }
+  
+  .tzSelect li {
+    height: 85px;
+    cursor: pointer;
+    position: relative;
+    /* Ð˜ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²ÐµÐ½Ð½Ñ‹Ñ… Ñ„Ð¾Ð½Ð¾Ð² CSS3 */
+    background: url('../img/dropdown_slice.png') repeat-x #222;
+    background-image: url('../img/dropdown_slice.png'), url('../img/dropdown_slice.png'), url('../img/dropdown_slice.png');
+    background-position: 50% -171px, 0 -85px, 0 0;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+  }
+  
+  .tzSelect li:hover {
+    background-position: 50% -256px, 0 -85px, 0 0;
+  }
+  
+  .tzSelect li span {
+    left: 88px;
+    position: absolute;
+    top: 27px;
+  }
+  
+  .tzSelect li i {
+    color: #999999;
+    display: block;
+    font-size: 12px;
+  }
+  
+  .tzSelect li img {
+    left: 9px;
+    position: absolute;
+    top: 13px;
+  }
+  
+  
+  /* Ð¡Ñ‚Ð¸Ð»Ð¸ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹ */
+  
+  #footer {
+    background-color: #212121;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .tri {
+    border-color: transparent transparent #212121;
+    border-style: solid;
+    border-width: 20px 17px;
+    height: 0;
+    left: 50%;
+    margin: -40px 0 0 -400px;
+    position: absolute;
+    top: 0;
+    width: 0;
+  }
+  
+  #footer h2 {
+    font-size: 20px;
+    font-weight: normal;
+    left: 50%;
+    margin-left: -400px;
+    padding: 25px 0;
+    position: absolute;
+    width: 600px;
+  }
+  
+  a,
+  a:visited {
+    text-decoration: none;
+    outline: none;
+    border-bottom: 1px dotted #97cae6;
+    color: #97cae6;
+  }
+  
+  a:hover {
+    border-bottom: 1px dashed transparent;
+  }
+  
+  .clear {
+    clear: both;
+  }

@@ -1,0 +1,83 @@
+
+.t_banner{
+    max-width: 1920px;
+    margin: 0 auto;
+    background: url(img/banner.jpg) no-repeat;
+    background-size: cover;
+
+}
+.t_bannerContent{
+
+    padding-top: 200px;
+    padding-bottom: 200px;
+    h1{
+        @include textStyle(bold);
+        font-size: 48px;
+        line-height: 58px;
+        text-transform: uppercase;
+        color: $black;
+        .t_mainTitle-lightBlue{
+            color: $lightyBlue;
+        }
+    }
+    .t_listTitle{
+        @include textStyle(bold);
+        font-size: 20px;
+        line-height: 24px;
+        color: $black;
+    }
+    .t_listTitle-margin{
+        margin-top: 36px;
+        margin-bottom: 10px;
+    }
+    ul{
+        @include textStyle(normal);
+        font-size: 20px;
+        line-height: 24px;
+        color: $black;
+        li{
+            list-style-type: none;
+        }
+        ::before{
+            content: '-';
+            padding: 0 10px;
+        }
+        li:not(:first-child){
+            margin-top: 5px;
+        }
+    }
+    .t_bannerButtons{
+        margin-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        a{
+            @include flexCenter;
+            text-decoration: none;
+            color: $wetBlack;
+            @include textStyle(normal);
+            font-size: 13px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-transform: uppercase;
+            width: 183px;
+            height: 43px;
+            left: 589px;
+            top: 604px;
+            background: $white;
+            border: 1px solid $grey;
+            border-radius: 4px;
+            transition-duration: 0.3s;
+        }
+        a:not(:first-child){
+            margin-left: 30px;
+        }
+        a:hover, a:active{
+            background: $lightyBlue;
+            border: 1px solid $white;
+            color: $white;
+        }
+
+    }
+}

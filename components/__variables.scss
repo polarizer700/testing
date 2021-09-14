@@ -1,0 +1,24 @@
+$headerBg: rgba(16, 16, 29, 0.9);
+$lightBlue: #43ABF0;
+$white: #FFFFFF;
+$lightyBlue:#3E9CDC;
+$black: #000000;
+$grey: #6F6D7B;
+$wetBlack: #2A2B30;
+$earth: #272733;
+$poorGrey:#BBBBBB;
+
+@mixin textStyle($weight) {
+    font-style: normal;
+    font-weight: $weight;
+}
+
+@mixin flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin dimensions{
+    width: ;
+    height: ;
+}

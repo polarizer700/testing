@@ -1,0 +1,76 @@
+.t_order{
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background: $earth url(img/earth.png) no-repeat;
+    background-size: cover;
+    .t_orderContent{
+        h2{
+            @include textStyle(700);
+            font-size: 36px;
+            line-height: 43px;
+            text-transform: uppercase;
+            color: $white;
+            text-align: center;
+            span{
+                color: $lightyBlue;
+            }
+        }
+        .t_orderSubTitle{
+           @include textStyle(normal);
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            color: $poorGrey;
+        }
+        .t_orderSubTitle-mt{
+            margin-top: 30px;
+        }
+    }
+}
+.t_steps{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.t_steps-margin{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.t_stepItem p{
+    margin-top: 20px;
+}
+.t_stepItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18%;
+}
+.t_circle{
+    width: 100px;
+    height: 100px;
+    @include flexCenter;
+    background: $lightyBlue;
+    border: 5px solid #286690;
+    border-radius: 50%;
+}
+.t_text{
+    @include textStyle(normal);
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: $white;
+    padding: 0 11px;
+}
+.t_formBox{
+    form{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        input, select{
+            display: block;
+            width: 30%;
+        }
+    }
+}

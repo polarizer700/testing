@@ -1,0 +1,39 @@
+
+header{
+    height: 100px;
+    background: $headerBg;
+    padding: 32px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    nav{
+        margin-left: auto;
+        a{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: $white;
+            text-decoration: none;
+        }
+        a:not(:first-child){
+            margin-left: 60px;
+        }
+        a:hover, a:active{
+           color: $lightBlue; 
+        }
+    }
+}
+.t_headerContent{
+    display: flex;
+    justify-content: space-between;
+}
+.t_logo{
+    display: block;
+    svg{
+        height: 100%;
+    }
+}

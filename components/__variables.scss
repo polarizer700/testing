@@ -7,6 +7,7 @@ $grey: #6F6D7B;
 $wetBlack: #2A2B30;
 $earth: #272733;
 $poorGrey:#BBBBBB;
+$footerBg: #3D4050;
 
 @mixin textStyle($weight) {
     font-style: normal;
@@ -18,7 +19,8 @@ $poorGrey:#BBBBBB;
     align-items: center;
     justify-content: center;
 }
-@mixin dimensions{
-    width: ;
-    height: ;
+@mixin inputDecor{
+    border: 1px solid $white;
+    border-radius: 4px;
+    padding: 12px 10px;
 }

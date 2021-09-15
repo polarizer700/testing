@@ -178,6 +178,7 @@
     <!-- Мы собираемся использовать jQuery, чтобы скрыть элемент select и заменить его -->
     <select name="fancySelect" class="makeMeFancy">
       <!-- Обратите внимание на атрибуты HTML5 данных -->
+
       <option value="0" selected="selected" data-skip="1">Выберите тип системы</option>
       <option value="1" data-icon="" data-html-text="Lorem ipsum dolor sit.">Lorem ipsum dolor sit.</option>
       <option value="2" data-icon="" data-html-text="Lorem ipsum dolor sit.">Lorem ipsum dolor sit.</option>
@@ -188,6 +189,7 @@
       <option value="7" data-icon="" data-html-text="Lorem ipsum dolor sit.">Lorem ipsum dolor sit.</option>
       <option value="8" data-icon="" data-html-text="Lorem ipsum dolor sit.">Lorem ipsum dolor sit.</option>
       <option value="9" data-icon="" data-html-text="Lorem ipsum dolor sit.">Lorem ipsum dolor sit.</option>
+
     </select>
 </div>
                             </div>
@@ -328,7 +330,9 @@ select.find('option').each(function(i) {
   // с иконкой данных и атрибутами HTML5 данных:
 
   var li = $('<li>', {
+
     html: '<span>' +
+
       option.data('html-text') + '</span>'
   });
 
@@ -390,6 +394,7 @@ $(document).click(function() {
 });
 
 
+
 let popup = document.getElementById('mypopup');
 let popupMenu = document.getElementById('burgerMenu');
 let popupClose = document.querySelector('.close');
@@ -417,6 +422,7 @@ window.onclick = function(e) {
 setTimeout(() => 
 document.querySelector('.tzSelect').style.width = "100%"
 , 4000);
+
 
     </script>
     

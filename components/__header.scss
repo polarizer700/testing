@@ -8,6 +8,7 @@ header{
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 3;
     nav{
         margin-left: auto;
         a{
@@ -35,5 +36,135 @@ header{
     display: block;
     svg{
         height: 100%;
+    }
+}
+.t_menu-mobile{
+    display: none;
+}
+.menuPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: flex-end;
+  }
+@media screen and (max-width: 1023px){
+    .t_logo svg{
+        width: 170px;
+    }
+    header {
+        height: 64px;
+        padding: 20px 0;
+    }
+    
+}
+@media screen and (max-width:767px){
+    header nav{
+        display: none;
+    }
+    .t_menu-mobile{
+        display: flex;
+        flex-direction: column;
+        div{
+            background: $white;
+            width: 20px;
+            height: 2px;
+            border-radius: 10px;
+        }
+        div:nth-child(n + 2){
+            margin-top: 6px;
+        }
+    }
+    .t_headerContent{
+        align-items: center;
+    }
+    
+    .popup_container {
+        width: 25%;
+        height: 100%;
+        background-color: #272733;
+        position: relative;
+        box-shadow: -10px 0px 10px rgba(5, 2, 54, 0.5);
+        animation-name: animateTop;
+        animation-duration: 0.4s;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+    
+      @keyframes animateTop {
+        from {
+          top: -300px;
+          opacity: 0;
+        }
+        to {
+          top: 0;
+          opacity: 1;
+        }
+      }
+      .close_button {
+        display: -ms-flex;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 1rem;
+      }
+    
+      .close {
+        color: $white;
+        cursor: pointer;
+        font-size: 2rem;
+      }
+    
+      .close:hover {
+        transition: 0.5s;
+        transform: rotate(180deg);
+      }
+    
+      .menuPop {
+        font-size: 16px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    
+      .menuPop li {
+        margin-top: 1rem;
+        list-style-type: none;
+        margin-right: 1.5rem;
+      }
+    
+      .menuPop a {
+        color: $white;
+        text-decoration: none;
+      }
+    
+      .menuPopup .networks {
+        padding-right: 1rem;
+        display: -ms-flex;
+        display: flex;
+        justify-content: flex-end;
+      }
+    
+      .menuPopup .networks a img {
+        width: 24px;
+        height: 24px;
+      }
+    
+      .price_content {
+        flex-direction: column;
+      }
+    
+      .price_content_box {
+        width: 100%;
+      }
+    
+}
+@media screen and (max-width:640px){
+    .popup_container{
+        width: 55%;
     }
 }

@@ -25,10 +25,31 @@
                     <a href="#">Цены</a>
                     <a href="#">Оформить заказ</a>
                 </nav>
+
+                <div class="t_menu-mobile" id="burgerMenu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
 
 
         </header>
+
+        <div class="menuPopup" id="mypopup">
+            <div class="popup_container">
+              <div class="close_button">
+                <span class="close">&times;</span>
+              </div>
+                  <ul class="menuPop touch">
+                    <li ><a href="#" class="popupLink">Бизнес</a></li>
+                    <li><a href="#" class="popupLink">О&nbsp;нас</a></li>
+                    <li ><a href="#" class="popupLink">Цены</a></li>
+                    <li><a href="#" class="popupLink">Оформить заказ</a></li>
+                    
+                  </ul>
+            </div>
+          </div>
 
         <main>
             <div class="t_banner">
@@ -157,11 +178,18 @@
     <!-- Мы собираемся использовать jQuery, чтобы скрыть элемент select и заменить его -->
     <select name="fancySelect" class="makeMeFancy">
       <!-- Обратите внимание на атрибуты HTML5 данных -->
-      <option value="0" selected="selected" data-skip="1">Выберите продукт</option>
-      <option value="1" data-icon="http://ruseller.com/lessons/les805/demo/img/products/js.png" data-html-text="JavaScript + jQuery для начинающих в видеоформате&lt;i&gt;посмотреть видеопрезентацию&lt;/i&gt;">JavaScript + jQuery для начинающих в видеоформате</option>
-      <option value="2" data-icon="http://ruseller.com/lessons/les805/demo/img/products/php.png" data-html-text="PHP + MySQL для начинающих&lt;i&gt;купить&lt;/i&gt;">PHP + MySQL для начинающих</option>
-      <option value="3" data-icon="http://ruseller.com/lessons/les805/demo/img/products/wp.png" data-html-text="WordPress - профессиональный блог за один день&lt;i&gt;скачать&lt;/i&gt;">WordPress - профессиональный блог за один день</option>
-      <option value="4" data-icon="http://ruseller.com/lessons/les805/demo/img/products/joomla.png" data-html-text="Joomla - профессиональный сайт за один день&lt;i&gt;купить&lt;/i&gt;">Joomla - профессиональный сайт за один день</option>
+
+      <option value="0" selected="selected" data-skip="1">Выберите тип системы</option>
+      <option value="1" data-icon="" data-html-text="Lorem ipsum dolor sit.">Lorem ipsum dolor sit.</option>
+      <option value="2" data-icon="" data-html-text="Lorem ipsum dolor sit.">Lorem ipsum dolor sit.</option>
+      <option value="3" data-icon="" data-html-text="Lorem ipsum dolor sit.">Lorem ipsum dolor sit.</option>
+      <option value="4" data-icon="" data-html-text="Lorem ipsum dolor sit.">Lorem ipsum dolor sit.</option>
+      <option value="5" data-icon="" data-html-text="Lorem ipsum dolor sit.">Lorem ipsum dolor sit.</option>
+      <option value="6" data-icon="" data-html-text="Lorem ipsum dolor sit.">Lorem ipsum dolor sit.</option>
+      <option value="7" data-icon="" data-html-text="Lorem ipsum dolor sit.">Lorem ipsum dolor sit.</option>
+      <option value="8" data-icon="" data-html-text="Lorem ipsum dolor sit.">Lorem ipsum dolor sit.</option>
+      <option value="9" data-icon="" data-html-text="Lorem ipsum dolor sit.">Lorem ipsum dolor sit.</option>
+
     </select>
 </div>
                             </div>
@@ -302,7 +330,9 @@ select.find('option').each(function(i) {
   // с иконкой данных и атрибутами HTML5 данных:
 
   var li = $('<li>', {
-    html: '<img src="' + option.data('icon') + '" /><span>' +
+
+    html: '<span>' +
+
       option.data('html-text') + '</span>'
   });
 
@@ -362,6 +392,38 @@ $(document).click(function() {
   dropDown.trigger('hide');
 });
 });
+
+
+
+let popup = document.getElementById('mypopup');
+let popupMenu = document.getElementById('burgerMenu');
+let popupClose = document.querySelector('.close');
+let popupLink = document.querySelector('.popupLink');
+
+
+popupMenu.addEventListener('click', function(){
+    popup.style.display = "flex";
+
+}) 
+popupClose.onclick = function() {
+  popup.style.display = "none";
+}
+
+
+window.onclick = function(e) {
+  if (e.target == popup){
+      popup.style.display = "none";
+  }else if (e.target == popupLink){
+    popup.style.display = "none";
+  }
+
+}
+
+setTimeout(() => 
+document.querySelector('.tzSelect').style.width = "100%"
+, 4000);
+
+
     </script>
     
 </body>

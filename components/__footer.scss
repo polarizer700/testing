@@ -51,4 +51,52 @@ footer{
         border-right: 1px solid #C3C3C3;
         padding: 0 40px;
     }
+
+}
+@media screen and (max-width:1280px){
+    footer .t_footerPart:nth-child(2){
+        padding: 0 20px;
+    }
+    footer .t_money:not(:first-child) {
+        margin-left: 8px;
+    }
+    footer .t_footerLink {
+        margin-left: 8px;
+    }
+    footer .t_footerLink:not(:first-child) {
+        margin-left: 8px;
+    }
+}
+@media screen and (max-width: 960px){
+    footer .t_footerContent{
+        flex-wrap: wrap;
+    }
+    footer .t_footerPart:nth-child(2) {
+        padding: 0 ;
+        border: 0;
+    }
+    .t_footerPart:nth-child(n +3){
+        margin-top: 20px;
+    }
+    footer .t_footerLink {
+        margin-left: 0;
+    }
+    footer{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+@media screen and (max-width:640px){
+    footer .t_footerContent{
+        flex-direction: column;
+    }
+    .t_footerPart:nth-child(n + 2) {
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:458px){
+    footer .t_footerContent .t_money{
+        font-size: 12px;
+        line-height: 14px;
+    }
 }
